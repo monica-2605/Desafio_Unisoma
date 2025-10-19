@@ -92,12 +92,11 @@ SYSTEM_PROMPT_FINAL = ("Você é um **Analista de Documentos Filosóficos** alta
 "'A informação solicitada não foi encontrada explicitamente no arquivo.' "
 "**FORMATO DE SAÍDA**: Entregue uma resposta formatada e clara, utilizando listas ou parágrafos concisos."                     
 )
-
 # --- FUNÇÃO RAG (Inalterada) ---
 def answer_rag_question(query: str, context_text: str, client: OpenAI) -> str:"""Função para gerar a resposta RAG usando o cliente OpenAI fornecido pelo usuário."""
     context_slice = context_text[:128000] # Limita para segurança de tokens
 
-    full_user_message = (
+    full_user_message = (
         f"CONTEXTO COMPLETO DO DOCUMENTO (TRANSCRICÃO):\n---\n{context_slice}\n---\n\n"
         f"PERGUNTA A SER ANALISADA E RESPONDIDA: {query}"
     )
