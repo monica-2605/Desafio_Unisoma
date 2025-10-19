@@ -82,7 +82,7 @@ def run_chat_interface(client, CONTEXT_TEXT):
             st.markdown(message["content"])
 
     # Lógica de input e chamada RAG
-    if prompt := st.chat_input("Digite sua pergunta aqui..."):
+    if prompt := st.chat_input("Digite sua pergunta aqui...", key="chat_input_principal"):
         st.session_state.messages.append({"role": "user", "content": prompt})
         with st.chat_message("user"):
             st.markdown(prompt)
