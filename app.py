@@ -114,8 +114,8 @@ if "openai_api_key" not in st.session_state:
 
 if not st.session_state["openai_api_key"]:
     
-    st.title("Bem-vindo ao Analista de Documentos")
-    st.warning("Para iniciar, por favor, insira sua chave secreta da OpenAI (ex: sk-...).")
+    st.title("Bem-vindo ao sua assistente da Heulosofia")
+    st.warning("Para iniciar, por favor, insira sua chave API da OpenAI.")
 
     with st.form("api_key_form"):
         api_key_input = st.text_input(
