@@ -67,14 +67,14 @@ def load_context_from_txt(path: str) -> str:
 def run_chat_interface(client, CONTEXT_TEXT):
     """Contém toda a lógica de exibição e interação do chat."""
 
-    st.title("Chatbot RAG - Análise de Documentos Filosóficos")
+    st.title("Assistente inteligente para se aprofundar na Heulosofia")
     st.caption(f"Contexto carregado: {len(CONTEXT_TEXT)} caracteres.")
 
     # Resto da lógica de chat (histórico, loop de mensagens, chamada RAG)
     if "messages" not in st.session_state:
         st.session_state.messages = []
         st.session_state.messages.append(
-            {"role": "assistant", "content": "Olá! Sua chave foi validada. Faça uma pergunta sobre o documento."}
+            {"role": "assistant", "content": "Olá! Sua chave foi validada. Faça uma pergunta sobre a Heulosofia."}
         )
 
     for message in st.session_state.messages:
