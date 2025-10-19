@@ -138,18 +138,18 @@ if not st.session_state["openai_api_key"]:
             except Exception as e:
                 st.error("Chave inválida. Verifique sua chave e tente novamente.")
 
-        else:
-            # 3. Se a chave estiver na sessão, inicializa o cliente e roda a interface
+    else:
+        # 3. Se a chave estiver na sessão, inicializa o cliente e roda a interface
             
-            # Inicializa o cliente OpenAI com a chave do usuário
-            user_client = OpenAI(api_key=st.session_state["openai_api_key"])
+        # Inicializa o cliente OpenAI com a chave do usuário
+        user_client = OpenAI(api_key=st.session_state["openai_api_key"])
             
-            # Adiciona um botão de "Sair" para limpar a chave da sessão
-            if st.sidebar.button("Trocar Chave / Sair"):
-                st.session_state["openai_api_key"] = ""
-                st.session_state.messages = [] # Limpa histórico para nova sessão
-                st.experimental_rerun()
+        # Adiciona um botão de "Sair" para limpar a chave da sessão
+        if st.sidebar.button("Trocar Chave / Sair"):
+            st.session_state["openai_api_key"] = ""
+            st.session_state.messages = [] # Limpa histórico para nova sessão
+            st.experimental_rerun()
         
-            # Roda a interface principal do chat
-            # TUDO O QUE FOR INTERAÇÃO DO CHAT DEVE OCORRER DENTRO DESTA FUNÇÃO
-            run_chat_interface(user_client, CONTEXT_TEXT) 
+         # Roda a interface principal do chat
+         # TUDO O QUE FOR INTERAÇÃO DO CHAT DEVE OCORRER DENTRO DESTA FUNÇÃO
+        run_chat_interface(user_client, CONTEXT_TEXT) 
