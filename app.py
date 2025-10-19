@@ -152,4 +152,4 @@ else:
     run_chat_interface(user_client, CONTEXT_TEXT)
          # Roda a interface principal do chat
          # TUDO O QUE FOR INTERAÇÃO DO CHAT DEVE OCORRER DENTRO DESTA FUNÇÃO
-        run_chat_interface(user_client, CONTEXT_TEXT) 
+    run_chat_interface(user_client, CONTEXT_TEXT) 
