@@ -151,6 +151,6 @@ else:
     # Roda a interface principal do chat
     run_chat_interface(user_client, CONTEXT_TEXT)
 
-    st.markdown(response)
+        st.markdown(response)
         
     st.session_state.messages.append({"role": "assistant", "content": response})
