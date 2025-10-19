@@ -94,8 +94,7 @@ SYSTEM_PROMPT_FINAL = ("Você é um **Analista de Documentos Filosóficos** alta
 )
 
 # --- FUNÇÃO RAG (Inalterada) ---
-def answer_rag_question(query: str, context_text: str, client: OpenAI) -> str:
-    """Função para gerar a resposta RAG usando o cliente OpenAI fornecido pelo usuário."""
+def answer_rag_question(query: str, context_text: str, client: OpenAI) -> str:"""Função para gerar a resposta RAG usando o cliente OpenAI fornecido pelo usuário."""
     context_slice = context_text[:128000] # Limita para segurança de tokens
 
     full_user_message = (
