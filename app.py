@@ -103,7 +103,7 @@ def run_chat_interface(client, CONTEXT_TEXT):
 
 
 # Configurações de Path (Usando o arquivo local do repositório)
-FILE_PATH = "palestras.txt"
+FILE_PATH = "palestras(certo).txt"
 CONTEXT_TEXT = load_context_from_txt(FILE_PATH)
 
 if CONTEXT_TEXT.startswith("ERRO"):
